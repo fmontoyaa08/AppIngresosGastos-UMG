@@ -4,7 +4,7 @@
 
 ---
 
-##  Alumna
+## 
 - **Estudiante:** Fátima Jacinta Montoya Aguilar
 - **Carnet:** 0905-25-24221
 - **Universidad:** Universidad Mariano Gálvez de Guatemala, Campus Jutiapa.
