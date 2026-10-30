@@ -1,0 +1,15 @@
+<resources>
+    <!-- Fondo y Tarjetas Oscuras -->
+    <color name="banco_background">#121212</color>
+    <color name="banco_card">#1E1E1E</color>
+
+    <!-- Paleta de Textos -->
+    <color name="banco_text_main">#FFD700</color>         <!-- Dorado elegante para resaltados principales -->
+    <color name="banco_text_white">#FFFFFF</color>        <!-- Blanco puro para títulos secundarios -->
+    <color name="banco_text_muted">#B0B0B0</color>        <!-- Gris claro para etiquetas y subtextos -->
+
+    <!-- Colores de Indicadores Financieros -->
+    <color name="verdeIngreso">#00A86B</color>
+    <color name="rojoGasto">#D9534F</color>
+    <color name="doradoBalance">#FFD700</color>
+</resources>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banco_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Cabecera: Bienvenida y Fecha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvBienvenida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¡Bienvenido a PistApp!"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/banco_text_main"/>
+
+                <TextView
+                    android:id="@+id/tvFechaActual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de hoy"
+                    android:textSize="12sp"
+                    android:textColor="@color/banco_text_muted"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <!-- Botón de Perfil Circular -->
+            <ImageButton
+                android:id="@+id/btnPerfil"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_fondo_redondeado"
+                android:scaleType="centerCrop"
+                android:contentDescription="Perfil de usuario"
+                android:elevation="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Tarjeta de Balance General -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/banco_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance Total"
+                    android:textColor="@color/banco_text_muted"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tvBalanceTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q 0.00"
+                    android:textColor="@color/doradoBalance"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tarjetas de Ingresos y Gastos Totales -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="16dp">
+
+            <!-- Ingresos -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/banco_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingresos"
+                        android:textColor="@color/banco_text_muted"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalIngresos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Q 0.00"
+                        android:textColor="@color/verdeIngreso"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Gastos -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/banco_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gastos"
+                        android:textColor="@color/banco_text_muted"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalGastos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Q 0.00"
+                        android:textColor="@color/rojoGasto"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Barra de porcentaje -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/banco_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvPorcentajeTexto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/banco_text_main"
+                    android:textSize="14sp"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBarPorcentaje"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressTint="@color/verdeIngreso"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón Nuevo Movimiento -->
+        <Button
+            android:id="@+id/btnNuevoMovimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ Nuevo Movimiento"
+            android:backgroundTint="@color/verdeIngreso"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Botón Ver Análisis -->
+        <Button
+            android:id="@+id/btnAnalisis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Análisis y Top Categorías"
+            android:backgroundTint="@color/banco_text_main"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Sello Corporativo al Pie -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" PISTAPP • EXECUTIVE FINANCE "
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:textColor="@color/banco_text_muted"
+                android:padding="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

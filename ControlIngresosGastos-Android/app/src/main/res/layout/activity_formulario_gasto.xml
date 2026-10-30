@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/banco_background"
+    android:padding="24dp">
+
+    <!-- Selector de Gasto o Ingreso -->
+    <RadioGroup
+        android:id="@+id/rgTipoMovimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbGasto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Gasto (-)"
+            android:textColor="@color/banco_text_main"
+            android:layout_marginEnd="24dp" />
+
+        <RadioButton
+            android:id="@+id/rbIngreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingreso (+)"
+            android:textColor="@color/banco_text_main" />
+    </RadioGroup>
+
+    <!-- Título dinámico -->
+    <TextView
+        android:id="@+id/tvTituloFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Gasto"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/banco_text_main"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Descripción -->
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción o concepto"
+        android:textColor="@color/banco_text_main"
+        android:textColorHint="@color/banco_text_muted"
+        android:inputType="text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Monto -->
+    <EditText
+        android:id="@+id/etMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto (ej. 150.00)"
+        android:textColor="@color/banco_text_main"
+        android:textColorHint="@color/banco_text_muted"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Selector de Método de Pago (Efectivo / Tarjeta) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Método de Pago:"
+        android:textStyle="bold"
+        android:textColor="@color/banco_text_main"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/rgMetodoPago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/rbEfectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="💵 Efectivo"
+            android:textColor="@color/banco_text_main"
+            android:layout_marginEnd="24dp" />
+
+        <RadioButton
+            android:id="@+id/rbTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💳 Tarjeta"
+            android:textColor="@color/banco_text_main" />
+    </RadioGroup>
+
+    <!-- Campo de Fecha -->
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Seleccionar fecha (YYYY-MM-DD)"
+        android:textColor="@color/banco_text_main"
+        android:textColorHint="@color/banco_text_muted"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardarMovimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Movimiento"
+        android:background="@drawable/btn_fondo_redondeado"
+        android:textColor="@color/banco_text_main"
+        android:textStyle="bold"
+        android:padding="12dp" />
+
+</LinearLayout>
