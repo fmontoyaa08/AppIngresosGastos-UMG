@@ -5,6 +5,8 @@ import edu.umg.progra2.ingresosGastos.datos.RepositorioGastos
 import edu.umg.progra2.ingresosGastos.servicio.ServicioFinanciero
 
 fun main() {
+    println("=== SISTEMA DE INGRESOS Y GASTOS (CONSOLA) ===")
+
     // 1. Instanciamos el repositorio de datos en memoria
     val repositorio = RepositorioGastos()
 
@@ -14,6 +16,6 @@ fun main() {
     // 3. Instanciamos el menú de consola inyectándole el servicio
     val menu = MenuConsola(servicio)
 
-    // 4. Arrancamos la aplicación
+    // 4. Arrancamos la aplicación de consola
     menu.iniciar()
 }

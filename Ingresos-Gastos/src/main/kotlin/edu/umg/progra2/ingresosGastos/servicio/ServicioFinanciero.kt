@@ -6,8 +6,8 @@ import edu.umg.progra2.ingresosGastos.modelo.Ingreso
 
 class ServicioFinanciero(private val repositorio: RepositorioGastos) {
 
-    fun registrarGasto(id: Int, descripcion: String, monto: Double, categoria: String) {
-        val gasto = Gasto(id, descripcion, monto, categoria)
+    fun registrarGasto(id: Int, descripcion: String, monto: Double, categoria: String, fecha: String) {
+        val gasto = Gasto(id, descripcion, monto, categoria, fecha)
         repositorio.agregarGasto(gasto)
     }
 
