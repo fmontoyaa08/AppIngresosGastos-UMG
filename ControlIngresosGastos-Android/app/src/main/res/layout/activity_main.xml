@@ -12,58 +12,64 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Cabecera: Bienvenida y Fecha -->
-        <LinearLayout
+        <!-- Cabecera: Bienvenida a la izquierda, Fecha centrada y Perfil a la derecha (Con margen superior) -->
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <!-- Título de bienvenida alineado a la izquierda -->
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/tvBienvenida"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="¡Bienvenido a PistApp!"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/banco_text_main"/>
+                android:text="¡Bienvenido a PistApp!"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
 
-                <TextView
-                    android:id="@+id/tvFechaActual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fecha de hoy"
-                    android:textSize="12sp"
-                    android:textColor="@color/banco_text_muted"
-                    android:layout_marginTop="2dp"/>
-            </LinearLayout>
-
-            <!-- Botón de Perfil Circular -->
+            <!-- Botón de Perfil en la esquina superior derecha -->
             <ImageButton
                 android:id="@+id/btnPerfil"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:background="@drawable/btn_fondo_redondeado"
                 android:scaleType="centerCrop"
                 android:contentDescription="Perfil de usuario"
                 android:elevation="2dp"/>
 
+        </RelativeLayout>
+
+        <!-- Fecha Actual Centrada y más grande -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvFechaActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha de hoy"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#566573"/>
         </LinearLayout>
 
-        <!-- Tarjeta de Balance General -->
+        <!-- Tarjeta de Balance General (Verde Esmeralda) -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
-            app:cardBackgroundColor="@color/banco_card">
+            app:cardBackgroundColor="@color/verdeIngreso">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,14 +81,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Balance Total"
-                    android:textColor="@color/banco_text_muted"
+                    android:textColor="#FFFFFF"
                     android:textSize="14sp"/>
+
                 <TextView
                     android:id="@+id/tvBalanceTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Q 0.00"
-                    android:textColor="@color/doradoBalance"
+                    android:text="Q 3437.00"
+                    android:textColor="#FFFFFF"
                     android:textSize="26sp"
                     android:textStyle="bold"
                     android:layout_marginTop="4dp"/>
@@ -98,14 +105,14 @@
             android:weightSum="2"
             android:layout_marginBottom="16dp">
 
-            <!-- Ingresos -->
+            <!-- Ingresos (Celeste equilibrado) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
                 app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="@color/banco_card">
+                app:cardBackgroundColor="#EBF5FB">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -117,29 +124,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ingresos"
-                        android:textColor="@color/banco_text_muted"
-                        android:textSize="12sp"/>
+                        android:textColor="#2980B9"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvTotalIngresos"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Q 0.00"
-                        android:textColor="@color/verdeIngreso"
+                        android:textColor="#1B4F72"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:layout_marginTop="4dp"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Gastos -->
+            <!-- Gastos (Rojo suave con número en rojo fuerte) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="@color/banco_card">
+                app:cardBackgroundColor="#FADBD8">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -151,15 +159,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Gastos"
-                        android:textColor="@color/banco_text_muted"
-                        android:textSize="12sp"/>
+                        android:textColor="#922B21"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvTotalGastos"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Q 0.00"
-                        android:textColor="@color/rojoGasto"
+                        android:textColor="#E74C3C"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:layout_marginTop="4dp"/>
@@ -168,35 +177,38 @@
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- Barra de porcentaje -->
+        <!-- Tarjeta y Barra de porcentaje ampliada y más abajo -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/banco_card">
+            android:layout_marginBottom="28dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#F4F6F7"
+            app:cardElevation="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="22dp">
 
                 <TextView
                     android:id="@+id/tvPorcentajeTexto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/banco_text_main"
-                    android:textSize="14sp"/>
+                    android:textColor="#2C3E50"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
                 <ProgressBar
                     android:id="@+id/progressBarPorcentaje"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="10dp"
+                    android:layout_height="16dp"
                     android:max="100"
                     android:progress="0"
-                    android:progressTint="@color/verdeIngreso"/>
+                    android:progressTint="@color/verdeIngreso"
+                    android:layout_marginTop="14dp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -209,38 +221,22 @@
             android:backgroundTint="@color/verdeIngreso"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:padding="14dp"
-            android:layout_marginBottom="12dp"/>
+            android:textSize="15sp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
 
-        <!-- Botón Ver Análisis -->
+        <!-- Botón de Resumen de Movimientos -->
         <Button
             android:id="@+id/btnAnalisis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ver Análisis y Top Categorías"
+            android:text="Resumen de Movimientos"
             android:backgroundTint="@color/banco_text_main"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:padding="14dp"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- Sello Corporativo al Pie -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" PISTAPP • EXECUTIVE FINANCE "
-                android:textStyle="bold"
-                android:textSize="11sp"
-                android:textColor="@color/banco_text_muted"
-                android:padding="6dp"/>
-        </LinearLayout>
+            android:textSize="15sp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
 
     </LinearLayout>
 </ScrollView>

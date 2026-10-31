@@ -31,15 +31,15 @@
             android:textColor="@color/banco_text_main" />
     </RadioGroup>
 
-    <!-- Título dinámico -->
+    <!-- Título principal -->
     <TextView
         android:id="@+id/tvTituloFormulario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrar Gasto"
+        android:text="Registrar Movimiento"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/banco_text_main"
+        android:textColor="#2C3E50"
         android:layout_marginBottom="24dp" />
 
     <!-- Descripción -->
@@ -58,20 +58,21 @@
         android:id="@+id/etMonto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Monto (ej. 150.00)"
+        android:hint="Monto"
         android:textColor="@color/banco_text_main"
         android:textColorHint="@color/banco_text_muted"
         android:inputType="numberDecimal"
         android:layout_marginBottom="24dp" />
 
-    <!-- Selector de Método de Pago (Efectivo / Tarjeta) -->
+    <!-- Etiqueta de Método de Pago -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Método de Pago:"
+        android:text="Método de Pago"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/banco_text_main"
-        android:layout_marginBottom="8dp" />
+        android:textColor="#2C3E50"
+        android:layout_marginBottom="12dp"/>
 
     <RadioGroup
         android:id="@+id/rgMetodoPago"
@@ -102,7 +103,7 @@
         android:id="@+id/etFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Seleccionar fecha (YYYY-MM-DD)"
+        android:hint="Seleccionar fecha"
         android:textColor="@color/banco_text_main"
         android:textColorHint="@color/banco_text_muted"
         android:focusable="false"
@@ -115,9 +116,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guardar Movimiento"
-        android:background="@drawable/btn_fondo_redondeado"
-        android:textColor="@color/banco_text_main"
+        android:backgroundTint="@color/verdeIngreso"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:padding="12dp" />
+        android:padding="14dp" />
 
 </LinearLayout>

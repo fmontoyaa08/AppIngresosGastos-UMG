@@ -1,9 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.ControlIngresosGastos" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    <!-- Tema Base de la App -->
+    <style name="Theme.ControlIngresosGastos" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Color primario de la app -->
+        <item name="colorPrimary">@color/verdeIngreso</item>
+        <item name="colorPrimaryVariant">@color/verdeIngreso</item>
+        <item name="colorOnPrimary">@color/banco_card</item>
 
-    <style name="Theme.ControlIngresosGastos" parent="Base.Theme.ControlIngresosGastos" />
+        <!-- Color secundario / acento -->
+        <item name="colorSecondary">@color/doradoBalance</item>
+        <item name="colorOnSecondary">@color/banco_card</item>
+    </style>
 </resources>

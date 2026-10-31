@@ -16,12 +16,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Análisis y Top Categorías"
-            android:textSize="22sp"
+            android:text="Resumen de Movimientos"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/banco_text_main"
-            android:layout_marginBottom="16dp"/>
-
+            android:textColor="#2C3E50" /> <!-- Negro elegante tipo ejecutivo -->
         <!-- Selector de Meses -->
         <Spinner
             android:id="@+id/spinnerMeses"
@@ -77,13 +75,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Desglose por Categoría"
-                    android:textSize="16sp"
+                    android:text="Distribución por Categorías"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/banco_text_main"
+                    android:textColor="#2C3E50"
                     android:layout_marginBottom="12dp"/>
 
                 <!-- ListView de Categorías -->
+
                 <ListView
                     android:id="@+id/listViewCategorias"
                     android:layout_width="match_parent"
@@ -92,24 +91,6 @@
                     android:dividerHeight="4dp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- Sello Corporativo al Pie -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" PISTAPP • EXECUTIVE FINANCE "
-                android:textStyle="bold"
-                android:textSize="11sp"
-                android:textColor="@color/banco_text_muted"
-                android:padding="6dp"/>
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

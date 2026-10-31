@@ -1,15 +1,15 @@
 <resources>
-    <!-- Fondo y Tarjetas Oscuras -->
-    <color name="banco_background">#121212</color>
-    <color name="banco_card">#1E1E1E</color>
+    <!-- Fondo General Claro -->
+    <color name="banco_background">#F5F6FA</color>        <!-- Fondo gris claro y limpio -->
+    <color name="banco_card">#FFFFFF</color>              <!-- Tarjetas blancas -->
 
-    <!-- Paleta de Textos -->
-    <color name="banco_text_main">#FFD700</color>         <!-- Dorado elegante para resaltados principales -->
-    <color name="banco_text_white">#FFFFFF</color>        <!-- Blanco puro para títulos secundarios -->
-    <color name="banco_text_muted">#B0B0B0</color>        <!-- Gris claro para etiquetas y subtextos -->
+    <!-- Paleta de Textos (Cambiamos a tonos oscuros para que se lean perfecto en fondo blanco) -->
+    <color name="banco_text_main">#00A86B</color>         <!-- Verde esmeralda para destacar -->
+    <color name="banco_text_white">#2C3E50</color>        <!-- Texto principal oscuro (¡Adiós letras blancas invisibles!) -->
+    <color name="banco_text_muted">#576574</color>        <!-- Gris oscuro para subtextos y porcentajes legibles -->
 
-    <!-- Colores de Indicadores Financieros -->
-    <color name="verdeIngreso">#00A86B</color>
-    <color name="rojoGasto">#D9534F</color>
-    <color name="doradoBalance">#FFD700</color>
+    <!-- Colores Distintos para cada Indicador Financiero -->
+    <color name="verdeIngreso">#00A86B</color>            <!-- Verde esmeralda para Ingresos -->
+    <color name="rojoGasto">#E74C3C</color>               <!-- Rojo vivo para Gastos -->
+    <color name="doradoBalance">#2980B9</color>           <!-- Azul elegante para el Balance Total (para que combine y resalte diferente) -->
 </resources>

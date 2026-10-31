@@ -48,7 +48,7 @@ class AnalisisActivity : AppCompatActivity() {
         txtPorcentajeGasto = if (idTexto != 0) findViewById(idTexto) else null
 
         val meses = arrayOf(
-            "📅 Octubre en adelante (Todos)",
+            "📅 Octubre en adelante ",
             "Octubre",
             "Noviembre",
             "Diciembre"
